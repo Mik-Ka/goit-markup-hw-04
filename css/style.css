@@ -118,7 +118,8 @@ body {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .top-contacts:hover,
@@ -130,6 +131,16 @@ body {
   margin-left: 50px;
 }
 
+.header-contacts-icon {
+  fill: var(--main-text-color);
+  margin-right: 10px;
+}
+
+.top-contacts:hover .header-contacts-icon,
+.top-contacts:focus .header-contacts-icon {
+  fill: var(--accent-color);
+}
+
 /* Hero section */
 
 .hero {
@@ -137,10 +148,12 @@ body {
   min-height: 600px;
   padding: 200px 0;
   background-color: rgba(47, 48, 58, 0.4);
+  background-image: linear-gradient(rgba (47, 48, 58, 0.4), rgba (47, 48, 58, 0.4));
   background-image: url(../images/Hero-Background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .hero-container {
@@ -184,9 +197,10 @@ body {
   border-radius: 4px;
 }
 
-/* .section-two {
+.section-two {
+  display: flex;
   margin: 94px auto;
-} */
+}
 
 .section-two-list {
   display: flex;
@@ -199,6 +213,11 @@ body {
 .section-two-item {
   width: 270px;
   height: 101px;
+}
+
+.section-two-thumb {
+  display: flex;
+  margin-bottom: 30px;
 }
 
 .section-two-title {
@@ -222,7 +241,6 @@ body {
 .section-three {
   display: flex;
   flex-direction: column;
-  padding-top: 0;
 }
 
 .section-three-list {
@@ -262,7 +280,10 @@ body {
   background: #ffffff;
   justify-content: center;
   width: 270px;
-  /* height: 368px; */
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .section-four-item:not(:last-child) {
@@ -270,7 +291,7 @@ body {
 }
 
 .section-four-content {
-  padding: 30px;
+  padding-top: 30px;
 }
 
 .section-four-title {
@@ -300,6 +321,55 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+
+.team-social-list {
+  display: flex;
+  margin-top: 20px;
+}
+
+.team-social-item {
+  width: 44px;
+  height: 44px;
+}
+
+.team-social {
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-left: 32px;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-social-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+}
+
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
+  fill: #ffffff;
 }
 
 .section-five {
@@ -375,16 +445,6 @@ body {
   align-items: baseline;
 }
 
-}
-
-.footer-social-container{
-  width: 206px;
-  height: 80px;
-  margin-left: 70px;
-  margin-right: 878px;
-  margin-top: 12px;
-}
-
 .logo-footer {
   display: block;
   font-weight: 700;
@@ -398,7 +458,8 @@ body {
 }
 
 .footer-list {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-item:not(:last-child) {
@@ -406,14 +467,15 @@ body {
 }
 
 .footer-address {
-  display: block;
+  display: flex;
   text-decoration: none;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71px;
   letter-spacing: 0.03em;
   color: #ffffff;
+  min-width: 231px;
+  margin-bottom: 9px;
 }
 
 .footer-contacts {
@@ -449,7 +511,7 @@ body {
   height: 44px;
 }
 
-.footer-social-item:not(:last-child){
+.footer-social-item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -475,7 +537,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill:#ffffff
+  fill: #ffffff;
 }
 
 /* PORTFOLIO PAGE */
@@ -534,6 +596,11 @@ body {
   margin-left: var(--projects-list-gap);
   margin-top: var(--projects-list-gap);
   background: #ffffff;
+}
+
+.projects-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-content {
