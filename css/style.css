@@ -147,8 +147,7 @@ body {
   width: 100%;
   min-height: 600px;
   padding: 200px 0;
-  background-color: rgba(47, 48, 58, 0.4);
-  background-image: linear-gradient(rgba (47, 48, 58, 0.4), rgba (47, 48, 58, 0.4));
+  background-color: repeating-linear-gradient(rgba (47, 48, 58, 0.4), rgba (47, 48, 58, 0.4));
   background-image: url(../images/Hero-Background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -189,17 +188,17 @@ body {
   height: 50px;
 }
 
-.hero-button:hover,
+/* .hero-button:hover,
 .hero-button:focus {
   color: var(--second-title-color);
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
+} */
 
 .section-two {
   display: flex;
-  margin: 94px auto;
+  /* margin: 94px auto; */
 }
 
 .section-two-list {
@@ -212,7 +211,7 @@ body {
 
 .section-two-item {
   width: 270px;
-  height: 101px;
+  min-height: 101px;
 }
 
 .section-two-thumb {
@@ -241,6 +240,7 @@ body {
 .section-three {
   display: flex;
   flex-direction: column;
+  padding-top: 0;
 }
 
 .section-three-list {
@@ -325,7 +325,8 @@ body {
 
 .team-social-list {
   display: flex;
-  margin-top: 20px;
+  padding-top: 16px;
+  padding-bottom: 30px;
 }
 
 .team-social-item {
@@ -401,8 +402,13 @@ body {
 .section-five-item {
   width: 170px;
   height: 92px;
+  display: flex;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+
+.section-five-item:not(:last-child) {
+  margin-left: 30px;
 }
 
 .clients-icon {
