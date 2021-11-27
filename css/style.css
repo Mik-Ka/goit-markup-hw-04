@@ -147,11 +147,8 @@ body {
   width: 100%;
   min-height: 600px;
   padding: 200px 0;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)),
-      url(../images/Hero-Background.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/Hero-Background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -208,18 +205,24 @@ body {
   display: flex;
 }
 
+.section-two-item {
+  width: 270px;
+  min-height: 251px;
+}
+
 .section-two-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.section-two-item {
-  width: 270px;
-  min-height: 101px;
-}
-
 .section-two-thumb {
+  width: 270px;
+  height: 120px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
 .section-two-title {
